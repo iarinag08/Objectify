@@ -4,8 +4,8 @@ Objectify este un emulator de streaming muzical (inspirat de Spotify), dezvoltat
 
 ### Tema 0
 
-- [ ] Nume proiect (poate fi schimbat ulterior)
-- [ ] Scurtă descriere a temei alese, ce v-ați propus să implementați
+- [ x] Nume proiect (poate fi schimbat ulterior)
+- [x ] Scurtă descriere a temei alese, ce v-ați propus să implementați
 
 ## Tema 1
 
