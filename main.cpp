@@ -32,7 +32,7 @@ private:
     int durata;
     Artist artist;
 public:
-    Piesa(const std::string& _titlu = "fara titlu", int _durata = 0,const Artist& _artist = Artist())
+    explicit Piesa(const std::string& _titlu = "fara titlu", int _durata = 0,const Artist& _artist = Artist())
         : titlu(_titlu), durata(_durata), artist(_artist) {}
 
     int getDurata() const { return durata;}
@@ -51,7 +51,7 @@ private:
     std::string nume;
     std::vector<Piesa> piese;
 public:
-    Playlist(const std::string& _nume = "Playlist nou")
+    explicit Playlist(const std::string& _nume = "Playlist nou")
         : nume(_nume) {}
 
     Playlist(const Playlist& other)
@@ -132,7 +132,7 @@ private:
     Playlist tracklist;
 
 public:
-    Album(const std::string& _titlu, int _an, const Playlist& _tracklist)
+    explicit Album(const std::string& _titlu, int _an, const Playlist& _tracklist)
         : titlu(_titlu), anlansare(_an), tracklist(_tracklist) {}
 
     friend std::ostream& operator<<(std::ostream& os, const Album& a)
