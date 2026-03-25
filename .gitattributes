@@ -5,3 +5,4 @@ external/* linguist-vendored
 tests/* linguist-documentation
 examples/* linguist-documentation
 scripts/* linguist-documentation
+src/main.cpp linguist-documentation
