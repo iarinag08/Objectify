@@ -1,8 +1,9 @@
-*.cpp linguist-language=C++
-*.h linguist-language=C++
+*.json linguist-documentation
+*.yml linguist-documentation
+*.yaml linguist-documentation
+*.md linguist-documentation
+*.txt linguist-documentation
+cmake/* linguist-vendored
 build/* linguist-vendored
 external/* linguist-vendored
-tests/* linguist-documentation
-examples/* linguist-documentation
-scripts/* linguist-documentation
-src/main.cpp linguist-documentation
+scripts/* linguist-vendored
