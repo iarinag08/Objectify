@@ -13,7 +13,7 @@ private:
     int ascultatori;
 
 public:
-    Artist(const std::string& _nume = "Unknown", int _ascultatori = 0)
+    explicit Artist(const std::string& _nume = "Unknown", int _ascultatori = 0)
         : nume(_nume), ascultatori(_ascultatori) {}
 
     const std::string& getNume() const { return nume; }
@@ -36,7 +36,7 @@ public:
         : titlu(_titlu), durata(_durata), artist(_artist) {}
 
     int getDurata() const { return durata;}
-    const Artist getArtist() const { return artist;}
+    const Artist& getArtist() const { return artist; }
 
     friend std::ostream& operator<<(std::ostream& os, const Piesa& p)
     {
