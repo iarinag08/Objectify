@@ -1,1 +1,9 @@
-ext/** linguist-vendored
+*.json linguist-documentation
+*.yml linguist-documentation
+*.yaml linguist-documentation
+*.md linguist-documentation
+*.txt linguist-documentation
+cmake/* linguist-vendored
+build/* linguist-vendored
+external/* linguist-vendored
+scripts/* linguist-vendored
