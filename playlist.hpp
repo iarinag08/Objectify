@@ -2,7 +2,7 @@
 #define PLAYLIST_HPP
 
 #include "piesa.hpp"
-#include "Exceptions.hpp"
+#include "exceptions.hpp"
 #include <vector>
 #include <string>
 
