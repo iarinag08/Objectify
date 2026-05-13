@@ -48,4 +48,13 @@ protected:
     void print(std::ostream& os) const override;
 };
 
+class AbonamentStudent : public Abonament {
+public:
+    AbonamentStudent();
+    Abonament* clone() const override;
+    double calculeazaPret() const override;
+protected:
+    void print(std::ostream& os) const override;
+};
+
 #endif

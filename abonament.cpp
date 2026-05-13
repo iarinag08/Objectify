@@ -26,3 +26,8 @@ AbonamentFree::AbonamentFree() : Abonament("FREE-001") {}
 Abonament* AbonamentFree::clone() const { return new AbonamentFree(*this); }
 double AbonamentFree::calculeazaPret() const { return 0.0; }
 void AbonamentFree::print(std::ostream& os) const { os << "Tip: FREE (cu reclame)"; }
+
+AbonamentStudent::AbonamentStudent() : Abonament("STUD-202") {}
+Abonament* AbonamentStudent::clone() const { return new AbonamentStudent(*this); }
+double AbonamentStudent::calculeazaPret() const { return 3.50; }
+void AbonamentStudent::print(std::ostream& os) const { os << "Tip: STUDENT (Reducere 60%)"; }
