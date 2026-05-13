@@ -1,7 +1,7 @@
 #ifndef PIESA_HPP
 #define PIESA_HPP
 
-#include "Artist.hpp"
+#include "artist.hpp"
 #include <string>
 
 class Piesa {

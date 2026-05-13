@@ -1,4 +1,5 @@
 #include "abonament.hpp"
+#include "exceptions.hpp"
 
 Abonament::Abonament(const std::string& _cod) : cod(_cod) {}
 

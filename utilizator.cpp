@@ -1,4 +1,5 @@
 #include "utilizator.hpp"
+#include "abonament.hpp"
 #include <iostream>
 
 int Utilizator::totalUtilizatori = 0;

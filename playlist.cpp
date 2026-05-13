@@ -1,4 +1,7 @@
 #include "playlist.hpp"
+#include "piesa.hpp"
+#include "artist.hpp"
+#include "exceptions.hpp"
 
 Playlist::Playlist(const std::string& _nume) : nume(_nume) {}
 
