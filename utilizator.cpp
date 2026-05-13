@@ -32,7 +32,7 @@ void Utilizator::afiseazaSituatieFinanciara() const {
     tipAbonament->afisare(std::cout);
     std::cout << "\n";
 
-    if (auto* af = dynamic_cast<AbonamentFamily*>(tipAbonament)) {
+    if (const auto* af = dynamic_cast<const AbonamentFamily*>(tipAbonament)) {
         std::cout << " -> Info: Cost per membru: " << tipAbonament->calculeazaPret() / af->getNrMembri() << " EUR.\n";
     }
 }
