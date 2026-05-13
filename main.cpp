@@ -35,6 +35,9 @@ int main() {
         u1.afiseazaSituatieFinanciara();
         u2.afiseazaSituatieFinanciara();
 
+        Utilizator u3("Andrei", AbonamentStudent());
+        u3.afiseazaSituatieFinanciara();
+
         std::cout << "\nTotal utilizatori in aplicatie: " << Utilizator::getTotalUtilizatori() << "\n";
 
 
