@@ -1,4 +1,4 @@
-#include "Artist.hpp"
+#include "artist.hpp"
 
 Artist::Artist(const std::string& _nume, int _ascultatori)
     : nume(_nume), ascultatori(_ascultatori) {}

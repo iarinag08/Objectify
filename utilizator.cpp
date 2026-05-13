@@ -1,4 +1,4 @@
-#include "Utilizator.hpp"
+#include "utilizator.hpp"
 #include <iostream>
 
 int Utilizator::totalUtilizatori = 0;

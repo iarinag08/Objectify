@@ -1,8 +1,11 @@
 #include <iostream>
-#include "Playlist.hpp"
-#include "Utilizator.hpp"
-#include "Abonament.hpp"
-#include "Exceptions.hpp"
+#include "playlist.hpp"
+#include "utilizator.hpp"
+#include "abonament.hpp"
+#include "exceptions.hpp"
+#include "artist.hpp"
+#include "piesa.hpp"
+
 
 int main() {
     try {

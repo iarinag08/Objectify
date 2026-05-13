@@ -1,4 +1,4 @@
-#include "Piesa.hpp"
+#include "piesa.hpp"
 
 Piesa::Piesa(const std::string& _titlu, int _durata, const Artist& _artist)
     : titlu(_titlu), durata(_durata), artist(_artist) {}

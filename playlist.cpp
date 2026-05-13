@@ -1,4 +1,4 @@
-#include "Playlist.hpp"
+#include "playlist.hpp"
 
 Playlist::Playlist(const std::string& _nume) : nume(_nume) {}
 
