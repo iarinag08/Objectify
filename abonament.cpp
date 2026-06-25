@@ -31,3 +31,10 @@ AbonamentStudent::AbonamentStudent() : Abonament("STUD-202") {}
 Abonament* AbonamentStudent::clone() const { return new AbonamentStudent(*this); }
 double AbonamentStudent::calculeazaPret() const { return 3.50; }
 void AbonamentStudent::print(std::ostream& os) const { os << "Tip: STUDENT (Reducere 60%)"; }
+
+Abonament* AbonamentFactory::creareAbonament(const std::string& tip, int membri) {
+    if (tip == "Premium") return new AbonamentPremium();
+    if (tip == "Family") return new AbonamentFamily(membri);
+    if (tip == "Student") return new AbonamentStudent();
+    return new AbonamentFree();
+}

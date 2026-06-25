@@ -3,6 +3,7 @@
 
 #include "abonament.hpp"
 #include <string>
+#include <vector>
 
 class Utilizator {
 private:
@@ -19,6 +20,19 @@ public:
 
     void afiseazaSituatieFinanciara() const;
     static int getTotalUtilizatori();
+};
+
+class PlatformaMuzica {
+private:
+    std::vector<Utilizator> utilizatori;
+    PlatformaMuzica() = default;
+public:
+    PlatformaMuzica(const PlatformaMuzica&) = delete;
+    PlatformaMuzica& operator=(const PlatformaMuzica&) = delete;
+
+    static PlatformaMuzica& getInstance();
+    void adaugaUtilizator(const Utilizator& u);
+    void afiseazaTot() const;
 };
 
 #endif

@@ -57,4 +57,9 @@ protected:
     void print(std::ostream& os) const override;
 };
 
+class AbonamentFactory {
+public:
+    static Abonament* creareAbonament(const std::string& tip, int membri = 0);
+};
+
 #endif

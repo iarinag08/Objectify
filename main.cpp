@@ -1,56 +1,49 @@
-#include <iostream>
-#include "playlist.hpp"
-#include "utilizator.hpp"
 #include "abonament.hpp"
-#include "exceptions.hpp"
 #include "artist.hpp"
 #include "piesa.hpp"
-
+#include "playlist.hpp"
+#include "utilizator.hpp"
+#include <iostream>
 
 int main() {
-    try {
-        std::string numeAscultator;
-        std::cout << "Introduceti numele tau: ";
-        std::cin >> numeAscultator;
+    Abonament* ab1 = AbonamentFactory::creareAbonament("Premium");
+    Abonament* ab2 = AbonamentFactory::creareAbonament("Family", 4);
 
-        Artist a1("Irina Rimes", 1500000);
-        Artist a2("Taylor Swift", 100000000);
+    Utilizator u1("Alexandru", *ab1);
+    Utilizator u2("Maria", *ab2);
 
-        Piesa p1("Cosmos", 210, a1);
-        Piesa p2("Bolnavi amandoi", 205, a1);
-        Piesa p3("All Too Well", 613, a2);
+    PlatformaMuzica::getInstance().adaugaUtilizator(u1);
+    PlatformaMuzica::getInstance().adaugaUtilizator(u2);
+    PlatformaMuzica::getInstance().afiseazaTot();
 
-        Playlist chill("My Chill Mix");
-        chill.addPiesa(p1);
-        chill.addPiesa(p2);
-        chill.addPiesa(p3);
+    Artist a1("The Weeknd", 110000000);
+    Artist a2("Daft Punk", 40000000);
 
-        std::cout << "\n" << chill << "\n";
-        Playlist mixTaylor = chill.generateMix("Taylor Swift");
-        std::cout << mixTaylor << "\n";
+    Piesa p1("Starboy", 230, a1);
+    Piesa p2("Get Lucky", 248, a2);
 
-        Utilizator u1(numeAscultator, AbonamentPremium());
-        Utilizator u2("Maria", AbonamentFamily(4));
+    std::cout << "\n--- CATALOG ARTISTI (Instantiere 1 Template Class) ---\n";
+    Catalog<Artist> catalogArtisti;
+    catalogArtisti.adauga(a1);
+    catalogArtisti.adauga(a2);
+    catalogArtisti.afiseazaCatalog();
 
-        u1.afiseazaSituatieFinanciara();
-        u2.afiseazaSituatieFinanciara();
+    std::cout << "\n--- CATALOG PIESE (Instantiere 2 Template Class) ---\n";
+    Catalog<Piesa> catalogPiese;
+    catalogPiese.adauga(p1);
+    catalogPiese.adauga(p2);
+    catalogPiese.afiseazaCatalog();
 
-        Utilizator u3("Andrei", AbonamentStudent());
-        u3.afiseazaSituatieFinanciara();
+    playItem(p1);
 
-        std::cout << "\nTotal utilizatori in aplicatie: " << Utilizator::getTotalUtilizatori() << "\n";
+    Playlist playlistVara("Vara 2026");
+    playlistVara.addPiesa(p1);
+    playlistVara.addPiesa(p2);
 
+    playItem(playlistVara);
 
-        AbonamentFamily abEroare(10);
+    delete ab1;
+    delete ab2;
 
-    }
-    catch (const MusicAppException& e) {
-        std::cerr << "\n[EROARE SPECIFICA] " << e.what() << "\n";
-    }
-    catch (const std::exception& e) {
-        std::cerr << "\n[EROARE SISTEM] " << e.what() << "\n";
-    }
-
-    std::cout << "\nProgramul s-a incheiat.\n";
     return 0;
 }

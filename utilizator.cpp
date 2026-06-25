@@ -1,5 +1,4 @@
 #include "utilizator.hpp"
-#include "abonament.hpp"
 #include <iostream>
 
 int Utilizator::totalUtilizatori = 0;
@@ -38,3 +37,19 @@ void Utilizator::afiseazaSituatieFinanciara() const {
 }
 
 int Utilizator::getTotalUtilizatori() { return totalUtilizatori; }
+
+PlatformaMuzica& PlatformaMuzica::getInstance() {
+    static PlatformaMuzica instance;
+    return instance;
+}
+
+void PlatformaMuzica::adaugaUtilizator(const Utilizator& u) {
+    utilizatori.push_back(u);
+}
+
+void PlatformaMuzica::afiseazaTot() const {
+    std::cout << "\n--- UTILIZATORI PLATFORMA ---\n";
+    for (const auto& u : utilizatori) {
+        u.afiseazaSituatieFinanciara();
+    }
+}

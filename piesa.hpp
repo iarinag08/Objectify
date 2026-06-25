@@ -3,6 +3,7 @@
 
 #include "artist.hpp"
 #include <string>
+#include <iostream>
 
 class Piesa {
 private:
@@ -15,5 +16,10 @@ public:
     const Artist& getArtist() const;
     friend std::ostream& operator<<(std::ostream& os, const Piesa& p);
 };
+
+template <typename T>
+void playItem(const T& item) {
+    std::cout << "\n>>> SE REDA ACUM: \n" << item << "\n--------------------\n";
+}
 
 #endif
