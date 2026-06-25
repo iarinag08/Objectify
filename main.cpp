@@ -22,7 +22,7 @@ int main() {
     Piesa p1("Starboy", 230, a1);
     Piesa p2("Get Lucky", 248, a2);
 
-    std::cout << "\n--- CATALOG ARTISTI (Instantiere 1 Template Class) ---\n";
+    std::cout << "\n--- CATALOG ARTISTI ---\n";
     Catalog<Artist> catalogArtisti;
     catalogArtisti.adauga(a1);
     catalogArtisti.adauga(a2);

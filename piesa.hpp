@@ -19,7 +19,7 @@ public:
 
 template <typename T>
 void playItem(const T& item) {
-    std::cout << "\n>>> SE REDA ACUM: \n" << item << "\n--------------------\n";
+    std::cout << "\n SE REDA ACUM: \n" << item <<"\n";
 }
 
 #endif
